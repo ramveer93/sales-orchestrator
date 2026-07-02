@@ -1,5 +1,7 @@
 # ComplAI Sales Orchestrator
 
+<video src="https://github.com/ramveer93/sales-orchestrator/raw/master/assets/sales_email_orchestrator.mov" autoplay loop muted playsinline width="100%"></video>
+
 This project is an AI-powered sales email generator for **ComplAI**, a SaaS tool that simplifies SOC2 compliance and audit preparation. 
 
 Instead of a single AI generating an email, this project uses an **Agent Orchestration** pattern (via `openai-agents`) where multiple AI "Sales Agents" with different personalities write distinct drafts. A "Sales Manager" AI then evaluates the drafts, selects the best one, and automatically sends it to the target via the Resend API.
