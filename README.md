@@ -12,6 +12,37 @@ Instead of a single AI generating an email, this project uses an **Agent Orchest
 
 The backend is built with **FastAPI** and uses Server-Sent Events (SSE) to stream the orchestration process back to a client in real-time.
 
+## The Agent Framework
+
+This project leverages the official `openai-agents` Python SDK to create and orchestrate the agents. We define each sales persona as an individual `Agent`, and then expose them as *tools* to a primary `Sales Manager` agent.
+
+Here is a snippet showing how we assemble the agents programmatically:
+
+```python
+from agents import Agent
+
+# Define the sub-agents with distinct system instructions
+sales_agent1 = Agent(name="Professional Sales Agent", instructions=instructions1, model="gpt-5.4-mini")
+sales_agent2 = Agent(name="Humorous Sales Agent", instructions=instructions2, model="gpt-5.4-mini")
+sales_agent3 = Agent(name="Executive Sales Agent", instructions=instructions3, model="gpt-5.4-mini")
+
+# Expose the sub-agents as callable tools
+tool1 = sales_agent1.as_tool(tool_name="sales_email_writer_1", tool_description=description)
+tool2 = sales_agent2.as_tool(tool_name="sales_email_writer_2", tool_description=description)
+tool3 = sales_agent3.as_tool(tool_name="sales_email_writer_3", tool_description=description)
+
+# Provide the sub-agents (and a standard email sending tool) to the Manager
+tools = [tool1, tool2, tool3, send_email_tool]
+
+# The Manager Agent is responsible for executing the workflow
+sales_manager = Agent(
+    name="Sales Manager", 
+    instructions=manager_instructions, 
+    tools=tools, 
+    model="gpt-5.4-mini"
+)
+```
+
 ## How it Works (Agent Orchestration)
 
 When a request comes in (e.g., "Write a cold sales email to a startup CEO"), the system triggers the **Sales Manager Agent**. The Manager acts as the orchestrator and has access to several tools. 
