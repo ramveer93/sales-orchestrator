@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+openai-agents
+python-dotenv
+sse-starlette
+resend
