@@ -1,6 +1,10 @@
 # ComplAI Sales Orchestrator
 
-<video src="https://raw.githubusercontent.com/ramveer93/sales-orchestrator/master/assets/sales_email_orchestrator.mp4" autoplay loop muted playsinline width="100%"></video>
+
+
+https://github.com/user-attachments/assets/338fd9d9-06a4-4215-8161-1f191e36dadd
+
+
 
 This project is an AI-powered sales email generator for **ComplAI**, a SaaS tool that simplifies SOC2 compliance and audit preparation. 
 
