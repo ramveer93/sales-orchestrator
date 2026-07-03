@@ -1,5 +1,11 @@
 # ComplAI Sales Orchestrator
 
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-009688?style=flat&logo=fastapi&logoColor=white)
+![OpenAI](https://img.shields.io/badge/OpenAI_Agents_SDK-412991?style=flat&logo=openai&logoColor=white)
+![Resend](https://img.shields.io/badge/Resend-000000?style=flat)
+![SSE](https://img.shields.io/badge/SSE_Streaming-FF6600?style=flat)
+
 
 
 https://github.com/user-attachments/assets/338fd9d9-06a4-4215-8161-1f191e36dadd
@@ -103,3 +109,11 @@ After selecting the winning draft, the Manager Agent invokes the `send_email_too
    cd backend
    uvicorn main:app --reload
    ```
+
+---
+
+<p align="center">
+  Built by <a href="https://profile-64ef8.firebaseapp.com/">Ramveer Singh</a> · 
+  <a href="https://www.linkedin.com/in/ramveer7up/">LinkedIn</a> · 
+  <a href="https://github.com/ramveer93">GitHub</a>
+</p>
